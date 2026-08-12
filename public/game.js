@@ -78,13 +78,16 @@ function drawBlock(x, y, color, image) {
     const drawX = x * BLOCK_SIZE;
     const drawY = y * BLOCK_SIZE;
 
-    if (image) {
+    if (image && image.complete && image.naturalHeight > 0) {
         try {
             ctx.drawImage(image, drawX + 2, drawY + 2, BLOCK_SIZE - 4, BLOCK_SIZE - 4);
         } catch (e) {
             // Fallback to color if image fails
             ctx.fillStyle = color;
             ctx.fillRect(drawX, drawY, BLOCK_SIZE, BLOCK_SIZE);
+            ctx.strokeStyle = '#000';
+            ctx.lineWidth = 2;
+            ctx.strokeRect(drawX, drawY, BLOCK_SIZE, BLOCK_SIZE);
         }
     } else {
         ctx.fillStyle = color;
@@ -570,7 +573,7 @@ document.querySelectorAll('.color-btn').forEach(btn => {
         document.getElementById('previewType').textContent = `Color: ${colorName}`;
         drawPreview();
     });
-});
+}););
 
 // Initialize
 resetGame();
