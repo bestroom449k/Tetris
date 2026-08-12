@@ -495,7 +495,6 @@ function loadImages() {
 
             images.forEach(image => {
                 const img = new Image();
-                img.src = image.url;
 
                 const imageItem = document.createElement('div');
                 imageItem.className = 'image-item';
@@ -515,9 +514,15 @@ function loadImages() {
                 imageItem.appendChild(imgElement);
                 imageItem.appendChild(deleteBtn);
 
-                imageItem.addEventListener('click', () => {
-                    selectImage(img, imageItem);
-                });
+                // Set up image loading handler first
+                img.onload = () => {
+                    imageItem.addEventListener('click', () => {
+                        selectImage(img, imageItem);
+                    });
+                };
+                
+                // Then set src to trigger loading
+                img.src = image.url;
 
                 imageList.appendChild(imageItem);
             });
