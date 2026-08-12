@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tetris Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="game-section">
+      <h1>🎮 Tetris Game</h1>
+      
+      <div class="game-info">
+        <div class="info-item">
+          <span class="label">Score:</span>
+          <span class="value" id="score">0</span>
+        </div>
+        <div class="info-item">
+          <span class="label">Level:</span>
+          <span class="value" id="level">1</span>
+        </div>
+        <div class="info-item">
+          <span class="label">Lines:</span>
+          <span class="value" id="lines">0</span>
+        </div>
+      </div>
+
+      <div class="game-board">
+        <canvas id="gameCanvas" width="300" height="600"></canvas>
+      </div>
+
+      <div class="controls">
+        <button id="startBtn" class="btn btn-primary">Start Game</button>
+        <button id="pauseBtn" class="btn btn-secondary" disabled>Pause</button>
+        <button id="resetBtn" class="btn btn-secondary">Reset</button>
+      </div>
+
+      <div class="instructions">
+        <h3>Controls:</h3>
+        <ul>
+          <li><strong>← →</strong> Move block left/right</li>
+          <li><strong>↓</strong> Speed up falling</li>
+          <li><strong>↑</strong> or <strong>Z</strong> Rotate block</li>
+          <li><strong>Space</strong> Drop block instantly</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="customize-section">
+      <h2>🎨 Customize Blocks</h2>
+      
+      <div class="upload-area">
+        <label for="imageInput" class="upload-label">
+          <div class="upload-box">
+            <div class="upload-icon">📤</div>
+            <p>Click to upload or drag & drop</p>
+            <p class="file-info">(JPG, PNG, GIF, WebP - Max 5MB)</p>
+          </div>
+        </label>
+        <input 
+          type="file" 
+          id="imageInput" 
+          accept="image/*"
+          hidden
+        >
+      </div>
+
+      <div class="uploaded-images">
+        <h3>Available Block Images:</h3>
+        <div id="imageList" class="image-list"></div>
+      </div>
+
+      <div class="block-colors">
+        <h3>Color Presets:</h3>
+        <div class="color-grid">
+          <button class="color-btn" data-color="#FF0000" style="background-color: #FF0000;" title="Red"></button>
+          <button class="color-btn" data-color="#FF7F00" style="background-color: #FF7F00;" title="Orange"></button>
+          <button class="color-btn" data-color="#FFFF00" style="background-color: #FFFF00;" title="Yellow"></button>
+          <button class="color-btn" data-color="#00FF00" style="background-color: #00FF00;" title="Green"></button>
+          <button class="color-btn" data-color="#0000FF" style="background-color: #0000FF;" title="Blue"></button>
+          <button class="color-btn" data-color="#4B0082" style="background-color: #4B0082;" title="Indigo"></button>
+          <button class="color-btn" data-color="#9400D3" style="background-color: #9400D3;" title="Violet"></button>
+          <button class="color-btn" data-color="#00FFFF" style="background-color: #00FFFF;" title="Cyan"></button>
+        </div>
+      </div>
+
+      <div class="current-block-preview">
+        <h3>Current Block Style:</h3>
+        <div class="preview-type" id="previewType">Color: Blue</div>
+        <canvas id="previewCanvas" width="120" height="120"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
