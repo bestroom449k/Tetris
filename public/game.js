@@ -570,7 +570,7 @@ document.querySelectorAll('.color-btn').forEach(btn => {
         document.getElementById('previewType').textContent = `Color: ${colorName}`;
         drawPreview();
     });
-}););
+});
 
 // Initialize
 resetGame();
