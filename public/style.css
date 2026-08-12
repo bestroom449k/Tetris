@@ -1,352 +1,352 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  min-height: 100vh;
-  padding: 20px;
-  color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+    color: #333;
 }
 
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-  padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 20px;
 }
 
 @media (max-width: 768px) {
-  .container {
-    grid-template-columns: 1fr;
-  }
+    .container {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Game Section */
 .game-section {
-  background: white;
-  border-radius: 15px;
-  padding: 30px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .game-section h1 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #667eea;
-  font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #667eea;
+    font-size: 2.5em;
 }
 
 .game-info {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
-  margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
 }
 
 .info-item {
-  background: #f5f5f5;
-  padding: 15px;
-  border-radius: 10px;
-  text-align: center;
-  border: 2px solid #667eea;
+    background: #f5f5f5;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    border: 2px solid #667eea;
 }
 
 .info-item .label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 8px;
-  color: #667eea;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #667eea;
 }
 
 .info-item .value {
-  display: block;
-  font-size: 1.8em;
-  font-weight: bold;
-  color: #764ba2;
+    display: block;
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #764ba2;
 }
 
 /* Game Board */
 .game-board {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 #gameCanvas {
-  background-color: #1a1a1a;
-  display: block;
-  border: 3px solid #667eea;
+    background-color: #1a1a1a;
+    display: block;
+    border: 3px solid #667eea;
 }
 
 /* Controls */
 .controls {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
 .btn {
-  padding: 12px 20px;
-  font-size: 1em;
-  font-weight: bold;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
+    padding: 12px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .btn-primary {
-  background: #667eea;
-  color: white;
+    background: #667eea;
+    color: white;
 }
 
 .btn-primary:hover:not(:disabled) {
-  background: #764ba2;
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+    background: #764ba2;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
 }
 
 .btn-secondary {
-  background: #e0e0e0;
-  color: #333;
+    background: #e0e0e0;
+    color: #333;
 }
 
 .btn-secondary:hover:not(:disabled) {
-  background: #d0d0d0;
-  transform: translateY(-2px);
+    background: #d0d0d0;
+    transform: translateY(-2px);
 }
 
 .btn:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
+    opacity: 0.5;
+    cursor: not-allowed;
 }
 
 /* Instructions */
 .instructions {
-  background: #f5f5f5;
-  padding: 15px;
-  border-radius: 10px;
-  border-left: 4px solid #667eea;
+    background: #f5f5f5;
+    padding: 15px;
+    border-radius: 10px;
+    border-left: 4px solid #667eea;
 }
 
 .instructions h3 {
-  margin-bottom: 10px;
-  color: #667eea;
+    margin-bottom: 10px;
+    color: #667eea;
 }
 
 .instructions ul {
-  list-style: none;
-  padding-left: 20px;
+    list-style: none;
+    padding-left: 20px;
 }
 
 .instructions li {
-  margin: 8px 0;
-  color: #555;
+    margin: 8px 0;
+    color: #555;
 }
 
 .instructions strong {
-  color: #764ba2;
+    color: #764ba2;
 }
 
 /* Customize Section */
 .customize-section {
-  background: white;
-  border-radius: 15px;
-  padding: 30px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  height: fit-content;
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    height: fit-content;
 }
 
 .customize-section h2 {
-  margin-bottom: 20px;
-  color: #667eea;
-  font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #667eea;
+    font-size: 1.8em;
 }
 
 .customize-section h3 {
-  margin: 20px 0 15px 0;
-  color: #764ba2;
-  font-size: 1.1em;
+    margin: 20px 0 15px 0;
+    color: #764ba2;
+    font-size: 1.1em;
 }
 
 /* Upload Area */
 .upload-area {
-  margin-bottom: 25px;
+    margin-bottom: 25px;
 }
 
 .upload-label {
-  display: block;
-  cursor: pointer;
+    display: block;
+    cursor: pointer;
 }
 
 .upload-box {
-  border: 2px dashed #667eea;
-  border-radius: 10px;
-  padding: 40px 20px;
-  text-align: center;
-  transition: all 0.3s ease;
-  background: #f9f9f9;
+    border: 2px dashed #667eea;
+    border-radius: 10px;
+    padding: 40px 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    background: #f9f9f9;
 }
 
 .upload-box:hover {
-  border-color: #764ba2;
-  background: #f0f0f0;
+    border-color: #764ba2;
+    background: #f0f0f0;
 }
 
 .upload-icon {
-  font-size: 2.5em;
-  margin-bottom: 10px;
+    font-size: 2.5em;
+    margin-bottom: 10px;
 }
 
 .upload-box p {
-  margin: 5px 0;
-  color: #666;
+    margin: 5px 0;
+    color: #666;
 }
 
 .file-info {
-  font-size: 0.9em;
-  color: #999 !important;
+    font-size: 0.9em;
+    color: #999 !important;
 }
 
 /* Image List */
 .uploaded-images {
-  margin-bottom: 25px;
+    margin-bottom: 25px;
 }
 
 .image-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
-  gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 10px;
 }
 
 .image-item {
-  position: relative;
-  border-radius: 8px;
-  overflow: hidden;
-  cursor: pointer;
-  transition: transform 0.3s ease;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
 .image-item:hover {
-  transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 .image-item img {
-  width: 100%;
-  height: 80px;
-  object-fit: cover;
-  display: block;
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+    display: block;
 }
 
 .image-item.selected {
-  border: 3px solid #667eea;
-  box-shadow: 0 0 10px rgba(102, 126, 234, 0.5);
+    border: 3px solid #667eea;
+    box-shadow: 0 0 10px rgba(102, 126, 234, 0.5);
 }
 
 .image-item .delete-btn {
-  position: absolute;
-  top: 2px;
-  right: 2px;
-  background: rgba(255, 0, 0, 0.8);
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  cursor: pointer;
-  font-size: 0.8em;
-  display: none;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    background: rgba(255, 0, 0, 0.8);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    font-size: 0.8em;
+    display: none;
 }
 
 .image-item:hover .delete-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Color Grid */
 .color-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
 }
 
 .color-btn {
-  width: 100%;
-  aspect-ratio: 1;
-  border: 3px solid transparent;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
+    width: 100%;
+    aspect-ratio: 1;
+    border: 3px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .color-btn:hover {
-  transform: scale(1.05);
-  border-color: #333;
+    transform: scale(1.05);
+    border-color: #333;
 }
 
 .color-btn.selected {
-  border-color: #333;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  transform: scale(1.1);
+    border-color: #333;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
 }
 
 /* Block Preview */
 .current-block-preview {
-  background: #f5f5f5;
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
 }
 
 .preview-type {
-  margin-bottom: 15px;
-  font-weight: bold;
-  color: #764ba2;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #764ba2;
 }
 
 #previewCanvas {
-  background: white;
-  border: 2px solid #ddd;
-  border-radius: 8px;
-  margin: 0 auto;
-  display: block;
+    background: white;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    margin: 0 auto;
+    display: block;
 }
 
 /* Responsive Design */
 @media (max-width: 600px) {
-  .game-info {
-    grid-template-columns: 1fr;
-  }
+    .game-info {
+        grid-template-columns: 1fr;
+    }
 
-  .color-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
+    .color-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
 
-  .controls {
-    grid-template-columns: 1fr;
-  }
+    .controls {
+        grid-template-columns: 1fr;
+    }
 
-  .container {
-    padding: 10px;
-  }
+    .container {
+        padding: 10px;
+    }
 
-  .game-section,
-  .customize-section {
-    padding: 20px;
-  }
+    .game-section,
+    .customize-section {
+        padding: 20px;
+    }
 
-  .game-section h1 {
-    font-size: 2em;
-  }
+    .game-section h1 {
+        font-size: 2em;
+    }
 }
